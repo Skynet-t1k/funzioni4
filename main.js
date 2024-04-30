@@ -8,9 +8,9 @@
 
 
 function verPalindroma(strDaVerificare) {
-    let strNospace = strDaVerificare.replace(/\W/g, "")
-    let arraystrNospace = strNospace.split("");
-    if (arraystrNospace.join() == arraystrNospace.reverse().join()){
+    let strNospace = strDaVerificare.replace(/\W/g, "").toLowerCase();
+    let arraystrNospace = strNospace.split("").reverse().join("");
+    if (strNospace == arraystrNospace){
         return true;
     }
     else {
@@ -18,6 +18,6 @@ function verPalindroma(strDaVerificare) {
     };
 }
 
-let check = verPalindroma("i topi non avevano nipoti")
+let check = verPalindroma("I topI non avevano nipotI")
 
 console.log(check);
